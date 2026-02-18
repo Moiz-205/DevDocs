@@ -59,6 +59,12 @@ deactivate
 delete .venv
 ```
 
+Show environment location
+
+```bash
+py -m venv --help
+```
+
 ---
 
 ## Python Package Manager
@@ -102,6 +108,71 @@ pip list
 pip uninstall package-name
 ```
 
+Create a requirements.txt file for the installed packages
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+#### *via UV package manager*
+
+Check UV version
+
+```bash
+uv --version
+```
+
+Initial project
+
+```bash
+uv init project-name
+```
+
+Create virtual environment
+
+```bash
+uv create .venv
+```
+
+Activate virtual environment using UV
+
+```bash
+uv activate .venv
+```
+
+Install package
+
+```bash
+uv add package-name
+uv pip install package-name
+```
+
+List installed packages
+
+```bash
+uv list
+```
+
+Deactivate virtual environment using UV
+
+```bash
+uv deactivate
+```
+
+Remove virtual environment
+
+```bash
+uv remove .venv
+```
+
+Rename virtual environment
+
+```bash
+uv rename old-name new-name
+```
+
 ---
 
 ## Jupyter Notebooks
@@ -127,6 +198,10 @@ jupyter kernelspec list
 - Remove kernel from your machine
 
 ```bash
-jupyter kernelspecs remove .venv
-jupyter kernelspecs uninstall .venv
+jupyter kernelspec remove .venv
+jupyter kernelspec uninstall .venv
 ```
+
+---
+
+#### 
