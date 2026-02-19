@@ -6,7 +6,7 @@ A guide for **Python CLI commands**.
 
 ## Python Basics
 
-- check python version
+- Check python version
 
 ```bash
 python --version
@@ -59,7 +59,7 @@ deactivate
 delete .venv
 ```
 
-Show environment location
+- Show virtual environment location
 
 ```bash
 py -m venv --help
@@ -96,10 +96,16 @@ pip install package-name
 -U: Latest version
 ```
 
-List all packages
+- List all packages
 
 ```bash
 pip list
+```
+
+- Search specific package
+
+```bash
+pip search package-name
 ```
 
 - Remove a package
@@ -108,69 +114,93 @@ pip list
 pip uninstall package-name
 ```
 
-Create a requirements.txt file for the installed packages
+- Create a requirements.txt file for the installed packages
 
 ```bash
 pip freeze > requirements.txt
+```
+
+- Install packages from requirement.txt
+
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
 #### *via UV package manager*
 
-Check UV version
+- Check UV version
 
 ```bash
 uv --version
 ```
 
-Initial project
+- Initialize project
 
 ```bash
 uv init project-name
 ```
 
-Create virtual environment
+- Create virtual environment
 
 ```bash
 uv create .venv
 ```
 
-Activate virtual environment using UV
+- Activate virtual environment using UV
 
 ```bash
 uv activate .venv
 ```
 
-Install package
+- Install package
 
 ```bash
 uv add package-name
 uv pip install package-name
 ```
 
-List installed packages
+- List installed packages
 
 ```bash
 uv list
 ```
 
-Deactivate virtual environment using UV
+- Update a package
+
+```bash
+uv update package-name
+```
+
+- Deactivate virtual environment using UV
 
 ```bash
 uv deactivate
 ```
 
-Remove virtual environment
+- Remove virtual environment
 
 ```bash
 uv remove .venv
 ```
 
-Rename virtual environment
+- Rename virtual environment
 
 ```bash
 uv rename old-name new-name
+```
+
+- Export virtual environment to YAML
+
+```bash
+uv export .venv > env.yaml
+```
+
+- Import virtual environment from YAML
+
+```bash
+uv import env.yaml
 ```
 
 ---
