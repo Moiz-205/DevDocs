@@ -145,7 +145,7 @@ uv init project-name
 - Create virtual environment
 
 ```bash
-uv create .venv
+uv venv .venv
 ```
 
 - Activate virtual environment using UV
