@@ -40,5 +40,3 @@ python --version
 ```
 
 Python 3.13.12 all set up!
-
-
